@@ -1,0 +1,25 @@
+{
+  "name": "@insomnia-labs/icc-wrapped-auth",
+  "version": "2.0.7",
+  "description": "Simple library to handle encryption and decryption of volt tokens and sharing auth to ICC wrapped application",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "publish": " npm run build && npm publish --access public"
+  },
+  "author": "Benjamin Nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}
