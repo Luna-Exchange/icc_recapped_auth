@@ -1,7 +1,7 @@
 # ICC Wrapped Auth
 
-The `icc-wrapped-auth` library provides a class, `ICCWrappedAuth`, that provides a set of utilities for managing ICC tokens and authentication for the icc wrapped application. It facilitates secure communication between the main ICC applications and the ICC Fan Passport application by handling user authentication tokens. It exposes methods to
-encryption users access token, decrypt the access token, and revoke the users access token.
+The `icc-wrapped-auth` library provides a class, `ICCWrappedAuth`, that provides a set of utilities for managing ICC tokens and authentication for the icc wrapped application. It facilitates secure communication between the main ICC applications and the ICC Wrapped application by handling user authentication tokens. It exposes methods to
+encrypt users access token, decrypt the access token, and revoke the users access token.
 
 ## Installation
 
@@ -26,7 +26,7 @@ const auth = new ICCWrappedAuth("production");
 
 ### Encrypting a Token
 
-Use the `encryptToken` method to encrypt a user's volt token. This token can then be included in URLs for redirecting users to the fan passport application.
+Use the `encryptToken` method to encrypt a user's volt token. This token can then be included in URLs for redirecting users to the ICC wrapped application.
 
 ```javascript
 async function encryptUserToken() {
@@ -39,6 +39,11 @@ async function encryptUserToken() {
   console.log("Encrypted Token:", encryptedToken);
 }
 encryptUserToken();
+```
+
+The encrypted token can then be passed to ICC Wrapped website like this as a query parameter `recapped_access` .
+```javascript
+https://example.com?recapped_access={encryptedToken}
 ```
 
 ### Validating an Encrypted Token
