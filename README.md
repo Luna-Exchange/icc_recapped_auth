@@ -22,6 +22,11 @@ import { ICCWrappedAuth } from "icc-wrapped-auth";
 
 // Initialize with production environment
 const auth = new ICCWrappedAuth("production");
+
+or
+
+// Initialize with staging environment
+const auth = new ICCWrappedAuth("staging");
 ```
 
 ### Encrypting a Token
