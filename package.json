@@ -1,6 +1,6 @@
 {
   "name": "@insomnia-labs/icc-wrapped-auth",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Simple library to handle encryption and decryption of volt tokens and sharing auth to ICC wrapped application",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
